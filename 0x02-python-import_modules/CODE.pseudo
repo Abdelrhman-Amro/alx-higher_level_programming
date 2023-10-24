@@ -1,0 +1,9 @@
+// args may be 1 or more
+Output:
+n arguments(.or:) // n will be 0 if there isn't any args
+                  // and print . at the end
+1: arg1
+2: arg2
+.....
+n: arg
+//n is len(argv) - 1
