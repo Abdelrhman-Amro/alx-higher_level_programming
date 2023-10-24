@@ -5,13 +5,14 @@ if __name__ == "__main__":
     import calculator_1
 
     nargs = len(argv)
-    a = int(argv[1])
-    op = argv[2]
-    b = int(argv[3])
 
     if nargs != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
+
+    a = int(argv[1])
+    op = argv[2]
+    b = int(argv[3])
 
     print("{} {} {} = ".format(a, op, b), end="")
 
