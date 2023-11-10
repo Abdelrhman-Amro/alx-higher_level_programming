@@ -28,6 +28,7 @@ class Square:
 
     @property
     def size(self):
+        """size -> GET/SET"""
         return self.__size
 
     @size.setter
