@@ -17,11 +17,11 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-        Rectangle.number_of_instances += 1
+        type(self).number_of_instances += 1
 
     def __del__(self):
         """Detect instance deletion"""
-        Rectangle.number_of_instances -= 1
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
@@ -62,15 +62,14 @@ class Rectangle:
 
     def __str__(self):
         """Return rectangle to print"""
-        S = ""
+        S = []
         if not (self.__height and self.__width):
-            return S
+            return "".join(S)
         for j in range(self.__height):
-            for i in range(self.__width):
-                S += Rectangle.print_symbol
+            [S.append(str(self.print_symbol)) for i in range(self.__width)]
             if j + 1 != self.__height:
-                S += '\n'
-        return S
+                S.append("\n")
+        return "".join(S)
 
     def __repr__(self):
         """
@@ -81,3 +80,30 @@ class Rectangle:
         new_rect = "Rectangle(" + str(self.__width) + ", "
         new_rect += str(self.__height) + ")"
         return new_rect
+
+
+
+my_rectangle_1 = Rectangle(8, 4)
+print(my_rectangle_1)
+print("--")
+my_rectangle_1.print_symbol = "&"
+print(my_rectangle_1.print_symbol," <-----")
+
+print(my_rectangle_1)
+print("--")
+my_rectangle_2 = Rectangle(2, 1)
+print(my_rectangle_2)
+print("--")
+Rectangle.print_symbol = "C"
+print(my_rectangle_2)
+print("--")
+
+my_rectangle_3 = Rectangle(7, 3)
+print(my_rectangle_3)
+
+print("--")
+
+my_rectangle_3.print_symbol = ["C", "is", "fun!"]
+print(my_rectangle_3)
+
+print("--")
