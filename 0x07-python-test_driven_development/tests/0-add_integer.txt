@@ -1,0 +1,44 @@
+''0-add_integer'' module
+============================
+
+Using add_integer function
+----------------------------
+
+Import function from module
+    >>> add_int = __import__('0-add_integer').add_integer
+
+check base case1
+    >>> add_int(1, 2)
+    3
+
+check base case 2
+    >>> add_int(142341, 381049832)
+    381192173
+
+check b no exist
+    >>> add_int(10)
+    108
+
+check float
+    >>> add_int(3.5, 6.6)
+    9
+
+check empty
+    >>> add_int()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+check a & b -> string
+    >>> add_int("", "")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+check a -> string
+    >>> add_int("41234412", 1234)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+check b -> string
+    >>> add_int(100, "5")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
