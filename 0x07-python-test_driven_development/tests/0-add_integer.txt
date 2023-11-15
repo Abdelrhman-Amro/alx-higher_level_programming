@@ -42,3 +42,13 @@ check b -> string
     >>> add_int(100, "5")
     Traceback (most recent call last):
     TypeError: b must be an integer
+
+check float('nan')
+    >>> add_int(float('nan'), 5)
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+check float('inf')
+    >>> add_int(float('inf'), 0)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
