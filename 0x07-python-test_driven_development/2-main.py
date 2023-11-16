@@ -5,5 +5,5 @@ matrix = [
     [1, 2, 3],
     [4, 5, "jlfks"]
 ]
-print(matrix_divided(matrix, 3))
+print(matrix_divided(matrix, "8"))
 print(matrix)

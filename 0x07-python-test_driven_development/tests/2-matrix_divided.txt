@@ -24,13 +24,13 @@ check list of list
     >>> mat = [1, 2, 3, 4]
     >>> print(mat_div(mat, 2))
     Traceback (most recent call last):
-    TypeError: matrix must be a matrix(list of lists) of integers/floats
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 check element in list not number
     >>> mat = [[1, 2], [1, "214"]]
     >>> print(mat_div(mat, 2))
     Traceback (most recent call last):
-    TypeError: matrix must be a matrix(list of lists) of integers/floats
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 check same size
     >>> mat = [[1, 2], [5, 6, 7]]
