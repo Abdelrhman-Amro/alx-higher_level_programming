@@ -1,0 +1,62 @@
+''2-matrix_divided'' module
+=================================
+
+Using matrix_divided function
+---------------------------------
+
+Import function from module
+    >>> mat_div = __import__('2-matrix_divided').matrix_divided
+
+check base cases
+    >>> mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    >>> print(mat_div(mat, 2))
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
+
+    >>> mat = [[4.8], [8.8]]
+    >>> print(mat_div(mat, 2))
+    [[2.4], [4.4]]
+
+    >>> mat = [[8.4, 12], [2.2, 8.2]]
+    >>> print(mat_div(mat, 2))
+    [[4.2, 6.0], [1.1, 4.1]]
+
+check list of list
+    >>> mat = [1, 2, 3, 4]
+    >>> print(mat_div(mat, 2))
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix(list of lists) of integers/floats
+
+check element in list not number
+    >>> mat = [[1, 2], [1, "214"]]
+    >>> print(mat_div(mat, 2))
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix(list of lists) of integers/floats
+
+check same size
+    >>> mat = [[1, 2], [5, 6, 7]]
+    >>> print(mat_div(mat, 2))
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+check div -> not number
+    >>> mat = [[2]]
+    >>> print(mat_div(mat, "32"))
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+check div = 0
+    >>> mat = [[2]]
+    >>> print(mat_div(mat, 0))
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+check empty list of list
+    >>> mat = [[]]
+    >>> print(mat_div(mat, 2))
+    [[]]
+
+check if empty list
+    >>> mat = []
+    >>> print(mat_div(mat, 2))
+    Traceback (most recent call last):
+    IndexError: list index out of range
