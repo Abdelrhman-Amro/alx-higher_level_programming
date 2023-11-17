@@ -1,44 +1,41 @@
 ''1-my_list.py'' module
 ===============================
 
-Using print_sorted function
+Using MyList class
 -------------------------------
 
 Import module
-    >>> print_sorted = __import__('1-my_list').MyList.print_sorted
+    >>> MyList = __import__('1-my_list').MyList
 
-check base
-    >>> l1 = [5, 4, 2]
-    >>> print_sorted(l1)
-    [2, 4, 5]
+check base case
+    >>> mylist = MyList()
+    >>> mylist.append(1)
+    >>> mylist.append(8)
+    >>> mylist.append(4)
+    >>> mylist.append(2)
+    >>> mylist.append(9)
+    >>> print(mylist)
+    [1, 8, 4, 2, 9]
+    >>> mylist.print_sorted()
+    [1, 2, 4, 8, 9]
+    >>> print(mylist)
+    [1, 8, 4, 2, 9]
+    >>> print(type(mylist))
+    <class '1-my_list.MyList'>
 
-    >>> l2 = [3, 2, 1, 5, 2]
-    >>> print_sorted(l2)
-    [1, 2, 2, 3, 5]
+check initiation
+    >>> list = [1, 8, 4, 2, 9]
+    >>> mylist2 = MyList(list)
+    >>> mylist2.print_sorted()
+    [1, 2, 4, 8, 9]
 
 check negative numbers
-    >>> l3 = [-5, 2, -1, 0]
-    >>> print_sorted(l3)
-    [-5, -1, 0, 2]
- 
-    >>> l4 = [-2, -5, -1]
-    >>> print_sorted(l4)
-    [-5, -2, -1]
-
-    >>> l5 = [-2, -5, -1, 0]
-    >>> print_sorted(l5)
-    [-5, -2, -1, 0]
-
-check one element
-    >>> l6 = [5]
-    >>> print_sorted(l6)
-    [5]
-
-    >>> l7 = [0]
-    >>> print_sorted(l7)
-    [0]
+    >>> list = [ -8, -4, -1, -2]
+    >>> mylist3 = MyList(list)
+    >>> mylist3.print_sorted()
+    [-8, -4, -2, -1]
 
 check empty
-    >>> l8 = []
-    >>> print_sorted(l8)
+    >>> mylist4 = MyList([])
+    >>> mylist4.print_sorted()
     []
