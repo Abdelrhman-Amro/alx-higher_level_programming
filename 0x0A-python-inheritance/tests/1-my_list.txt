@@ -1,0 +1,44 @@
+''1-my_list.py'' module
+===============================
+
+Using print_sorted function
+-------------------------------
+
+Import module
+    >>> print_sorted = __import__('1-my_list').MyList.print_sorted
+
+check base
+    >>> l1 = [5, 4, 2]
+    >>> print_sorted(l1)
+    [2, 4, 5]
+
+    >>> l2 = [3, 2, 1, 5, 2]
+    >>> print_sorted(l2)
+    [1, 2, 2, 3, 5]
+
+check negative numbers
+    >>> l3 = [-5, 2, -1, 0]
+    >>> print_sorted(l3)
+    [-5, -1, 0, 2]
+ 
+    >>> l4 = [-2, -5, -1]
+    >>> print_sorted(l4)
+    [-5, -2, -1]
+
+    >>> l5 = [-2, -5, -1, 0]
+    >>> print_sorted(l5)
+    [-5, -2, -1, 0]
+
+check one element
+    >>> l6 = [5]
+    >>> print_sorted(l6)
+    [5]
+
+    >>> l7 = [0]
+    >>> print_sorted(l7)
+    [0]
+
+check empty
+    >>> l8 = []
+    >>> print_sorted(l8)
+    []
