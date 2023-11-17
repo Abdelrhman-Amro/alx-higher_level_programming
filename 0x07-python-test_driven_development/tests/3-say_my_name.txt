@@ -34,3 +34,8 @@ check None
 check empty
     >>> print_name("", "")
     My name is  
+
+check missing two arguments
+    >>> print_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
