@@ -1,0 +1,36 @@
+''3-say_my_name'' module
+=============================
+Using say_my_name function
+-----------------------------
+
+Import module
+    >>> print_name = __import__('3-say_my_name').say_my_name
+
+check base cases
+    >>> print_name("ahmed", "amro")
+    My name is ahmed amro
+
+    >>> print_name("Mostafa")
+    My name is Mostafa 
+
+check not string
+    >>> print_name("Noor", 5)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> print_name(5, "amro")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+check None
+    >>> print_name(None, "amro")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    print_name("Abood", None)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+check empty
+    >>> print_name("", "")
+    My name is  
