@@ -1,0 +1,34 @@
+''5-text_indentation'' module
+==================================
+
+Using text_indentation function
+----------------------------------
+
+Import function from module
+    >>> txt_ind = __import__('5-text_indentation').text_indentation
+
+check base case
+    >>> txt_ind("   Ahmed: Amro. Ali?")
+    Ahmed:
+    <BLANKLINE>
+    Amro.
+    <BLANKLINE>
+    Ali?
+    <BLANKLINE>
+
+check not string
+    >>> txt_ind(100)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> txt_ind(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+check empty
+    >>> txt_ind("")
+
+check no arguments
+    >>> txt_ind()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
