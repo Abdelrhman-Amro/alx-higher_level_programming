@@ -1,0 +1,44 @@
+''4-print_square'' module
+==============================
+
+Using print_square function
+------------------------------
+
+Import module
+    >>> squ = __import__('4-print_square').print_square
+
+check base
+    >>> squ(5)
+    #####
+    #####
+    #####
+    #####
+    #####
+
+    >>> squ(1)
+    #
+
+    >>> squ(2)
+    ##
+    ##
+
+    >>> squ(0)
+
+check float
+    >>> squ(5.5)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+check size < 0
+    >>> squ(-5)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+    >>> squ(-5.5)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+check no arguments
+    >>> squ()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
