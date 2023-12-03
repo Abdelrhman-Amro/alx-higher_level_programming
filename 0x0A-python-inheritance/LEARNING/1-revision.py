@@ -1,7 +1,4 @@
 class Employee:
-   """
-    
-   """
    def __init__(self, name="Bhavana", age=24):
       self.name = name
       self.age = age
