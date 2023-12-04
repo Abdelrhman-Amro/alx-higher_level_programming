@@ -75,3 +75,7 @@ Check some extra cases
     >>> obj.integer_validator("XYZ", None)
     Traceback (most recent call last):
     TypeError: XYZ must be an integer
+
+    >>> obj.integer_validator("XYZ", (4,6,8))
+    Traceback (most recent call last):
+    TypeError: XYZ must be an integer
