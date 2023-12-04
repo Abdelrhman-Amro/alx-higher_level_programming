@@ -41,3 +41,37 @@ Missing required arguments
     >>> obj.integer_validator()
     Traceback (most recent call last):
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+check area function
+    >>> obj.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+    >>> obj.area("GEOMETRY")
+    Traceback (most recent call last):
+    TypeError: area() takes 1 positional argument but 2 were given
+
+    >>> obj.area("GEOMETRY", 1)
+    Traceback (most recent call last):
+    TypeError: area() takes 1 positional argument but 3 were given
+
+    >>> obj.area("GEOMETRY", 1, 8)
+    Traceback (most recent call last):
+    TypeError: area() takes 1 positional argument but 4 were given
+
+Check some extra cases
+    >>> obj.integer_validator("XYZ", True)
+    Traceback (most recent call last):
+    TypeError: XYZ must be an integer
+
+    >>> obj.integer_validator("XYZ", [1, 2])
+    Traceback (most recent call last):
+    TypeError: XYZ must be an integer
+
+    >>> obj.integer_validator("XYZ", {5, 6})
+    Traceback (most recent call last):
+    TypeError: XYZ must be an integer
+
+    >>> obj.integer_validator("XYZ", None)
+    Traceback (most recent call last):
+    TypeError: XYZ must be an integer
