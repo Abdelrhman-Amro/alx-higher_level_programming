@@ -12,12 +12,15 @@ Import module
 
 Check Base cases
     >>> obj = BG()
-    >>> obj.integer_validator("KOKO", 12)
-    >>> obj.integer_validator("ktkot", 12)
-    >>> obj.integer_validator("ktkot", 41234)
+    >>> obj.integer_validator("Name1", 12)
+    >>> obj.integer_validator("Name2", 41234)
     >>> obj.integer_validator("", 41234)
 
-Ceck Raise cases
+Check Raise cases
+    >>> obj.integer_validator("ARG","XO")
+    Traceback (most recent call last):
+    TypeError: ARG must be an integer
+
     >>> obj.integer_validator("Boyka", 0)
     Traceback (most recent call last):
     ValueError: Boyka must be greater than 0
@@ -29,3 +32,12 @@ Ceck Raise cases
     >>> obj.integer_validator("", -14213)
     Traceback (most recent call last):
     ValueError:  must be greater than 0
+
+Missing required arguments
+    >>> obj.integer_validator("ARG")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> obj.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
