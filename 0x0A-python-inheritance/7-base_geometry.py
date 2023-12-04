@@ -4,7 +4,6 @@
 
 class BaseGeometry:
     """BaseGeometry class"""
-    __done = 5
 
     def area(self):
         """area function"""
