@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Define Square class that inherit from BasesGeometry"""
-BG = __import__('7-base_geometry').BaseGeometry
+rect = __import__('9-rectangle').Rectangle
 
 
-class Square(BG):
+class Square(rect):
     """Square Class"""
 
     def __init__(self, size):
@@ -15,6 +15,7 @@ class Square(BG):
         """
         self.integer_validator("size", size)
         self.__size = size
+        super().__init__(size, size)
 
     def area(self):
         """Calculate the area of the square"""
