@@ -11,11 +11,11 @@ Import module
     >>> BG = __import__("7-base_geometry").BaseGeometry
 
 Check Base cases
->>> obj = BG()
->>> obj.integer_validator("KOKO", 12)
->>> obj.integer_validator("ktkot", 12)
->>> obj.integer_validator("ktkot", 41234)
->>> obj.integer_validator("", 41234)
+    >>> obj = BG()
+    >>> obj.integer_validator("KOKO", 12)
+    >>> obj.integer_validator("ktkot", 12)
+    >>> obj.integer_validator("ktkot", 41234)
+    >>> obj.integer_validator("", 41234)
 
 Ceck Raise cases
     >>> obj.integer_validator("Boyka", 0)
