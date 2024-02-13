@@ -4,5 +4,5 @@ if (isNaN(firstArg)) {
   console.log('Not a number');
 } else {
   const n = Math.floor(firstArg);
-  console.log(n);
+  console.log('My number: ' + n);
 }
