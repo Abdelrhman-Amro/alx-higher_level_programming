@@ -1,4 +1,5 @@
 #!/usr/bin/node
-export function add (n1, n2) {
+function add (n1, n2) {
   return (n1 + n2);
 }
+export { add };
