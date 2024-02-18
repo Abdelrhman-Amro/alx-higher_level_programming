@@ -1,2 +1,2 @@
---List data base
+-- List data base
 SHOW DATABASES;
