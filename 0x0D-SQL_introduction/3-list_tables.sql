@@ -1,2 +1,2 @@
 -- list tables
-SHOW tables;
+SHOW TABLES;
