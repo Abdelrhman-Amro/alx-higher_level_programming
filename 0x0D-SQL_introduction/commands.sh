@@ -6,7 +6,8 @@ cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ## 11 ##
 cat 11-best_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ## 12 ##
-
+cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+cat 12-no_cheating.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ## 13 ##
 
 ## 14 ##
