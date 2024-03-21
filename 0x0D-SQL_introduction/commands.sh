@@ -12,6 +12,7 @@ cat 12-no_cheating.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 
 ## 14 ##
 ## 15 ##
+cat 15-groups.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ## 16 ##
 ## 100 ##
 ## 101 ##
