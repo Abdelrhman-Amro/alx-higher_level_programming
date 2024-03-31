@@ -12,5 +12,5 @@ if __name__ == "__main__":
     session = Session()
     q = session.query(State).order_by(State.id)
     for row in q:
-        print(row.id, ":", row.name)
+        print("{}: {}".format(row.id, row.name))
     session.close()
