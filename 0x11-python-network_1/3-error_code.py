@@ -6,11 +6,11 @@ and displays the body of the response (decoded in utf-8).
 
 
 if __name__ == "__main__":
-    from urllib import request as req, error as err
-    from sys import argv
-    
+    import sys
+    from urllib import request as req, error as er
+
     try:
-        with req.urlopen(argv[1]) as res:
+        with req.urlopen(sys.argv[1]) as res:
             print(res.read().decode('UTF-8'))
-    except err.HTTPError as er:
-        print('Error code:', er.code)
+    except er.HTTPError as erno:
+        print('Error code:', erno.code)
