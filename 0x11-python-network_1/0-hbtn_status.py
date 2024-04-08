@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """fetches https://alx-intranet.hbtn.io/status"""
-from urllib import request as req
 
 
 if __name__ == "__main__":
+    from urllib import request as req
+
     with req.urlopen("https://alx-intranet.hbtn.io/status") as rsp:
         x = rsp.read()
         print("Body response:")
