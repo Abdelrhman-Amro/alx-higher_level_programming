@@ -9,4 +9,4 @@ if __name__ == "__main__":
 
     url = argv[1]
     rsp = GET(url)
-    print(rsp.headers['X-Request-Id'])
+    print(rsp.headers.get('X-Request-Id'))
