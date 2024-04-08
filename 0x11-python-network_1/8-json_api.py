@@ -8,10 +8,10 @@ if __name__ == "__main__":
     from requests import post as POST
     from sys import argv
 
-    if len(argv) > 1:
-        value = argv[1]
-    else:
+    if len(argv) == 1:
         value = ""
+    else:
+        value = argv[1]
 
     url = "http://0.0.0.0:5000/search_user"
     params = {'q': value}
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     try:
         j = rsp.json()
         if j is {}:
-            print('No result')
+            print("No result")
         else:
             print(f"[{j.get('id')}] {j.get('name')}")
     except ValueError:
