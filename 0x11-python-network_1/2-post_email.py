@@ -15,6 +15,6 @@ if __name__ == "__main__":
     data = {"email": email}
     encoded_data = p.urlencode(data).encode('utf-8')
     Req = req.Request(url, encoded_data, method='POST')
-    
+
     with req.urlopen(Req) as rsp:
         print(rsp.read().decode('UTF-8'))
