@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     url = argv[1]
     email = argv[2]
-    
+
     params = {'email': email}
     rsp = POST(url, data=params)
     print(rsp.text)
