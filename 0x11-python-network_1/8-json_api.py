@@ -14,8 +14,8 @@ if __name__ == "__main__":
         value = argv[1]
 
     url = "http://0.0.0.0:5000/search_user"
-    params = {'q': value}
-    rsp = POST(url, data=params)
+    payload = {'q': value}
+    rsp = POST(url, data=payload)
 
     try:
         j = rsp.json()
