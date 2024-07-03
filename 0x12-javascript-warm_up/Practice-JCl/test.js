@@ -1,3 +1,5 @@
-myVar = 89;
-myVar = 300;
-console.log(myVar);
+#!/usr/bin/node
+
+function outside(x) {
+  console.log(`${x}`);
+}
