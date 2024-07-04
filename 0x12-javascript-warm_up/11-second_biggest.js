@@ -11,9 +11,12 @@ function findSecondMaxNum (max, arr) {
   return secMax;
 }
 
-const arrOfNumbers = process.argv.slice(2).map((item) => Number(item));
-// console.log(arrOfNumbers);
-const max = findMaxNum(arrOfNumbers);
-// console.log(max);
-const secMax = findSecondMaxNum(max, arrOfNumbers);
-console.log(secMax);
+if (process.argv.length <= 3) console.log(0);
+else {
+  const arrOfNumbers = process.argv.slice(2).map((item) => Number(item));
+  // console.log(arrOfNumbers);
+  const max = findMaxNum(arrOfNumbers);
+  // console.log(max);
+  const secMax = findSecondMaxNum(max, arrOfNumbers);
+  console.log(secMax);
+}
