@@ -7,6 +7,7 @@
 // You are not allowed to use var
 // You are not allowed to use length
 
-const argsNumber = process.argv.length - 2;
-if (argsNumber === 0) console.log('No argument');
-else console.log(`${process.argv[2]}`);
+const res = process.argv.slice(2)[0];
+// console.log(res);
+if (res === undefined) console.log('No argument');
+else console.log(res);
